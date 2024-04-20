@@ -18,20 +18,8 @@ namespace Sistema_Financeiro
             "pwb=";
         public static void Conectar()
         {
-            try 
-            {
-                conn = new MySqlConnection(conexao);
-                conn.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            } 
-            finally 
-            { 
-                conn.Close();
-            }
-
+            conn = new MySqlConnection(conexao);
+            conn.Open();
         }
         public static void Desconectar()
         {
